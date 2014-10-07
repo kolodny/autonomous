@@ -7,9 +7,9 @@ phantom.create(function(err,ph) {
         console.log('page load findihed');
         console.log(arguments)
         page.evaluate(function() {
-            return document.body.innerHTML;
+          return document.body.innerHTML;
         }, function(err, html) {
-            console.log(html)
+          console.log(html)
         })
     }
 
