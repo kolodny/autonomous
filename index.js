@@ -10,6 +10,7 @@ _.extend(Autonomous.prototype, {
   done: exit,
   exit: exit,
   includeJs: includeJs,
+  injectJs: injectJs,
   get: get,
   set: set,
   untilLoad: untilLoad,
@@ -24,6 +25,7 @@ function Autonomous(options) {
   self.onLoadFinishedQueue = []
 
   return function(cb) {
+    self.cb = cb;
     phantom.create(function(err, ph) {
       if (err) throw err;
       self.ph = ph;
@@ -31,6 +33,11 @@ function Autonomous(options) {
         if (err) throw err;
         page.onLoadFinished = function() {
           (self.onLoadFinishedQueue.pop() || noop)();
+        }
+        page.onError = function(msg) {
+          var err = new Error('phantomError: ' + msg[0]);
+          err.evalStack = msg[1];
+          (self.cb || noop)(err);
         }
         self.page = page
         cb(null, self);
@@ -46,8 +53,9 @@ function open(options) {
   var self = this;
 
   return function(cb) {
+    self.cb = cb;
     self.page.open(settings.url, function(err, status) {
-      if (status !== 'success') throw new Error('status was ' + status);
+      if (status !== 'success') cb(new Error('status was ' + status));
       cb();
     });
   }
@@ -62,9 +70,19 @@ function includeJs(options) {
   var settings = defaultsHelper(options, {}, true);
 
   return function(cb) {
+    self.cb = cb;
     self.page.includeJs(settings.url, cb);
   }
+}
 
+function injectJs(options) {
+  var self = this;
+  var settings = defaultsHelper(options, {}, true);
+
+  return function(cb) {
+    self.cb = cb;
+    self.page.injectJs(settings.url, cb);    
+  }
 
 }
 
@@ -72,6 +90,7 @@ function get(prop) {
   var self = this;
 
   return function(cb) {
+    self.cb = cb;
     self.page.get(prop, cb);
   }
 }
@@ -84,15 +103,17 @@ function set(prop, val) {
   }
 }
 
-function nextLoad() {
-  return 
-}
-
-function untilLoad() {
+function untilLoad(ms) {
   var self = this;
 
   return function(cb) {
+    self.cb = cb;
     self.onLoadFinishedQueue.push(cb);
+    if (ms) {
+      setTimeout(function() {
+        cb(new Error('Timed out waiting for page load'));
+      }, ms);
+    }
   }
 }
 
@@ -100,7 +121,8 @@ function evaluate() {
   var self = this;
   var applyer = [].slice.call(arguments);
   return function(cb) {
-    applyer[1] = cb;
+    self.cb = cb;
+    applyer.splice(1, 0, cb);
     self.page.evaluate.apply(this.page, applyer);
   };
 }
