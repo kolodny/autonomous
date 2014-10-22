@@ -1,0 +1,116 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'c:\\Program Files (x86)\\nodejs\\node.exe',
+1 verbose cli   'c:\\Program Files (x86)\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'publish' ]
+2 info using npm@1.4.9
+3 info using node@v0.11.13
+4 verbose publish [ '.' ]
+5 verbose cache add [ '.', null ]
+6 verbose cache add name=undefined spec="." args=[".",null]
+7 verbose parsed url { protocol: null,
+7 verbose parsed url   slashes: null,
+7 verbose parsed url   auth: null,
+7 verbose parsed url   host: null,
+7 verbose parsed url   port: null,
+7 verbose parsed url   hostname: null,
+7 verbose parsed url   hash: null,
+7 verbose parsed url   search: null,
+7 verbose parsed url   query: null,
+7 verbose parsed url   pathname: '.',
+7 verbose parsed url   path: '.',
+7 verbose parsed url   href: '.' }
+8 silly lockFile 3a52ce78- .
+9 verbose lock . C:\Users\Kolodny\AppData\Roaming\npm-cache\3a52ce78-.lock
+10 verbose tar pack [ 'c:\\Users\\Kolodny\\AppData\\Local\\Temp\\npm-13228-S7M8v1r7\\1413937917301-0.7385709180962294\\tmp.tgz',
+10 verbose tar pack   '.' ]
+11 verbose tarball c:\Users\Kolodny\AppData\Local\Temp\npm-13228-S7M8v1r7\1413937917301-0.7385709180962294\tmp.tgz
+12 verbose folder .
+13 info prepublish autonomous@0.0.1
+14 silly lockFile 1f1177db-tar tar://.
+15 verbose lock tar://. C:\Users\Kolodny\AppData\Roaming\npm-cache\1f1177db-tar.lock
+16 silly lockFile 052e77e5-17301-0-7385709180962294-tmp-tgz tar://c:\Users\Kolodny\AppData\Local\Temp\npm-13228-S7M8v1r7\1413937917301-0.7385709180962294\tmp.tgz
+17 verbose lock tar://c:\Users\Kolodny\AppData\Local\Temp\npm-13228-S7M8v1r7\1413937917301-0.7385709180962294\tmp.tgz C:\Users\Kolodny\AppData\Roaming\npm-cache\052e77e5-17301-0-7385709180962294-tmp-tgz.lock
+18 silly lockFile 1f1177db-tar tar://.
+19 silly lockFile 1f1177db-tar tar://.
+20 silly lockFile 052e77e5-17301-0-7385709180962294-tmp-tgz tar://c:\Users\Kolodny\AppData\Local\Temp\npm-13228-S7M8v1r7\1413937917301-0.7385709180962294\tmp.tgz
+21 silly lockFile 052e77e5-17301-0-7385709180962294-tmp-tgz tar://c:\Users\Kolodny\AppData\Local\Temp\npm-13228-S7M8v1r7\1413937917301-0.7385709180962294\tmp.tgz
+22 verbose tar unpack c:\Users\Kolodny\AppData\Local\Temp\npm-13228-S7M8v1r7\1413937917301-0.7385709180962294\tmp.tgz
+23 silly lockFile de162487-m-cache-autonomous-0-0-1-package tar://C:\Users\Kolodny\AppData\Roaming\npm-cache\autonomous\0.0.1\package
+24 verbose lock tar://C:\Users\Kolodny\AppData\Roaming\npm-cache\autonomous\0.0.1\package C:\Users\Kolodny\AppData\Roaming\npm-cache\de162487-m-cache-autonomous-0-0-1-package.lock
+25 silly lockFile 052e77e5-17301-0-7385709180962294-tmp-tgz tar://c:\Users\Kolodny\AppData\Local\Temp\npm-13228-S7M8v1r7\1413937917301-0.7385709180962294\tmp.tgz
+26 verbose lock tar://c:\Users\Kolodny\AppData\Local\Temp\npm-13228-S7M8v1r7\1413937917301-0.7385709180962294\tmp.tgz C:\Users\Kolodny\AppData\Roaming\npm-cache\052e77e5-17301-0-7385709180962294-tmp-tgz.lock
+27 silly gunzTarPerm modes [ '755', '644' ]
+28 silly gunzTarPerm extractEntry package.json
+29 silly gunzTarPerm modified mode [ 'package.json', 438, 420 ]
+30 silly gunzTarPerm extractEntry fakeserver.js
+31 silly gunzTarPerm modified mode [ 'fakeserver.js', 438, 420 ]
+32 silly gunzTarPerm extractEntry index.js
+33 silly gunzTarPerm modified mode [ 'index.js', 438, 420 ]
+34 silly gunzTarPerm extractEntry jquery.js
+35 silly gunzTarPerm modified mode [ 'jquery.js', 438, 420 ]
+36 silly gunzTarPerm extractEntry test.js
+37 silly gunzTarPerm modified mode [ 'test.js', 438, 420 ]
+38 silly gunzTarPerm extractEntry try.js
+39 silly gunzTarPerm modified mode [ 'try.js', 438, 420 ]
+40 silly lockFile de162487-m-cache-autonomous-0-0-1-package tar://C:\Users\Kolodny\AppData\Roaming\npm-cache\autonomous\0.0.1\package
+41 silly lockFile de162487-m-cache-autonomous-0-0-1-package tar://C:\Users\Kolodny\AppData\Roaming\npm-cache\autonomous\0.0.1\package
+42 silly lockFile 052e77e5-17301-0-7385709180962294-tmp-tgz tar://c:\Users\Kolodny\AppData\Local\Temp\npm-13228-S7M8v1r7\1413937917301-0.7385709180962294\tmp.tgz
+43 silly lockFile 052e77e5-17301-0-7385709180962294-tmp-tgz tar://c:\Users\Kolodny\AppData\Local\Temp\npm-13228-S7M8v1r7\1413937917301-0.7385709180962294\tmp.tgz
+44 silly lockFile 3a52ce78- .
+45 silly lockFile 3a52ce78- .
+46 silly publish { name: 'autonomous',
+46 silly publish   version: '0.0.1',
+46 silly publish   description: '',
+46 silly publish   main: 'index.js',
+46 silly publish   scripts: { test: 'echo "Error: no test specified" && exit 1' },
+46 silly publish   author: '',
+46 silly publish   license: 'ISC',
+46 silly publish   dependencies:
+46 silly publish    { co: '^3.1.0',
+46 silly publish      lodash: '^2.4.1',
+46 silly publish      'node-phantom-simple': '^1.2.0' },
+46 silly publish   readme: 'ERROR: No README data found!',
+46 silly publish   _id: 'autonomous@0.0.1',
+46 silly publish   _shasum: '0468539b501354a0cb08e0c3d9cb320c8d289492',
+46 silly publish   _from: '.' }
+47 verbose url raw autonomous
+48 verbose url resolving [ 'https://registry.npmjs.org/', './autonomous' ]
+49 verbose url resolved https://registry.npmjs.org/autonomous
+50 info trying registry request attempt 1 at 20:31:57
+51 http PUT https://registry.npmjs.org/autonomous
+52 http 403 https://registry.npmjs.org/autonomous
+53 verbose headers { date: 'Wed, 22 Oct 2014 00:32:24 GMT',
+53 verbose headers   server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+53 verbose headers   'content-type': 'application/json',
+53 verbose headers   'cache-control': 'max-age=60',
+53 verbose headers   'content-length': '1573',
+53 verbose headers   'accept-ranges': 'bytes',
+53 verbose headers   via: '1.1 varnish',
+53 verbose headers   'x-served-by': 'cache-iad2120-IAD',
+53 verbose headers   'x-cache': 'MISS',
+53 verbose headers   'x-cache-hits': '0',
+53 verbose headers   'x-timer': 'S1413937944.242564,VS0,VE495',
+53 verbose headers   connection: 'close' }
+54 error publish Failed PUT 403
+55 error Error: forbidden cannot modify pre-existing version: 0.0.1
+55 error old={"name":"autonomous","version":"0.0.1","description":"","main":"index.js","scripts":{"test":"echo \"Error: no test specified\" && exit 1"},"author":"","license":"ISC","dependencies":{"co":"^3.1.0","lodash":"^2.4.1","node-phantom-simple":"^1.2.0"},"_id":"autonomous@0.0.1","_shasum":"f8dd7fb74a89c391ddcebc1d09b6e54f02221f2e","_from":".","_npmVersion":"1.4.9","_npmUser":{"name":"kolodny","email":"kolodny.github@gmail.com"},"maintainers":[{"name":"kolodny","email":"kolodny.github@gmail.com"}],"dist":{"shasum":"f8dd7fb74a89c391ddcebc1d09b6e54f02221f2e","tarball":"http://registry.npmjs.org/autonomous/-/autonomous-0.0.1.tgz"}}
+55 error new={"name":"autonomous","version":"0.0.1","description":"","main":"index.js","scripts":{"test":"echo \"Error: no test specified\" && exit 1"},"author":"","license":"ISC","dependencies":{"co":"^3.1.0","lodash":"^2.4.1","node-phantom-simple":"^1.2.0"},"readme":"ERROR: No README data found!","_id":"autonomous@0.0.1","_shasum":"0468539b501354a0cb08e0c3d9cb320c8d289492","_from":".","_npmVersion":"1.4.9","_npmUser":{"name":"kolodny","email":"kolodny.github@gmail.com"},"maintainers":[{"name":"kolodny","email":"kolodny.github@gmail.com"}],"dist":{"shasum":"0468539b501354a0cb08e0c3d9cb320c8d289492","tarball":"http://registry.npmjs.org/autonomous/-/autonomous-0.0.1.tgz"}}: autonomous
+55 error     at RegClient.<anonymous> (c:\Program Files (x86)\nodejs\node_modules\npm\node_modules\npm-registry-client\lib\request.js:273:14)
+55 error     at Request._callback (c:\Program Files (x86)\nodejs\node_modules\npm\node_modules\npm-registry-client\lib\request.js:211:65)
+55 error     at Request.self.callback (c:\Program Files (x86)\nodejs\node_modules\npm\node_modules\request\request.js:123:22)
+55 error     at Request.EventEmitter.emit (events.js:110:17)
+55 error     at Request.<anonymous> (c:\Program Files (x86)\nodejs\node_modules\npm\node_modules\request\request.js:893:14)
+55 error     at Request.EventEmitter.emit (events.js:129:20)
+55 error     at IncomingMessage.<anonymous> (c:\Program Files (x86)\nodejs\node_modules\npm\node_modules\request\request.js:844:12)
+55 error     at IncomingMessage.EventEmitter.emit (events.js:129:20)
+55 error     at _stream_readable.js:898:16
+55 error     at process._tickCallback (node.js:343:11)
+56 error If you need help, you may report this *entire* log,
+56 error including the npm and node versions, at:
+56 error     <http://github.com/npm/npm/issues>
+57 error System Windows_NT 6.1.7601
+58 error command "c:\\Program Files (x86)\\nodejs\\node.exe" "c:\\Program Files (x86)\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "publish"
+59 error cwd c:\Users\Kolodny\Documents\RandomProjects\autonomous
+60 error node -v v0.11.13
+61 error npm -v 1.4.9
+62 verbose exit [ 1, true ]
